@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>Hackaton</title>
+</head>
+<section id="searchScreen" background-image=>
+  <div class="logoWhite">
+    <img src="images/logoWhite.png">
+  </div>
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="Title, director, actors...">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<body>
+  <div class="menu">
+    <input id="toggle" type="checkbox" />
+    <label for="toggle" class="drop">
+      <svg width="36px" height="36px" viewBox="0 0 48 48">
+        <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+      </svg>
+    </label>
+    <nav>
+      <a id="list" href="#">My list</a>
+      <a id="home" href="#">Home</a>
+      <a id="aboutUs" href="#">About Us</a>
+    </nav>
+  </div>
+  <!-- Modal Welcome-->
+  <input type="checkbox" id="cerrar">
+  <label for="cerrar" id="btn-cerrar">X</label>
+  <div class="modal">
+    <div class="contenido">
+      <p>
+        Find your favorite movies & TV Shows in the available streaming platforms, with the best discounts.
+      </p>
+      <br><br>
+      <div class="logoBlue">
+        <img src="images/logo.png">
+      </div>
+    </div>
+  </div>
+  <!-- Modal Redirection-->
+  <div class="redirectingScreen">
+    <div id="miModal" class="modal1">
+      <div class="modalContenido ">
+        <div class="section5 group5">
+          <div class="logoBlue2 col5 span5_1_of_2">
+            <img src="images/logo.png">
+          </div>
+          <div class="amazonRedirect col5 span5_1_of_2 col6">
+            <img src="images/amazonLogo.jpg" width="30%">
+          </div>
+        </div>
+        <p>You've saved 20%! Redirecting to Prime Video.</p>
+        <p>Your cupon code is: 98XA1N5</p>
+        <p>It will be available only for the next 48 hrs. </p>
+        <p>Log in to your Amazon Prime account and go to redeem "gift card</p>
+        <a href="https://www.primevideo.com/ref=atv_nb_lcl_en_US">Continue</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+
+    <!-- Father container -->
+    <div class="screenContainer" id="movieContainer">
+
+      <div class="movieTop section group ">
+        <button id="addToList" title="Add to my list"><strong>+</strong></button>
+        <!-- Movie poster -->
+        <div class=" first col span_1_of_2">
+          <span class="movie-element box1">
+            <figure>
+              <img id="movie-picture">
+            </figure>
+          </span>
+        </div>
+        <div class="movieDetails col span_2_of_2">
+          <!-- Movie Title  -->
+          <div class="movie-element box2 ">
+            <label for="movieTitleSpan">Title: </label>
+            <span id="movie-title"></span>
+          </div>
+
+          <!-- Release year  -->
+          <div class="movie-element box3">
+            <label for="movieReleaseYear">Year: </label>
+            <span id="movie-year"></span>
+          </div>
+
+          <!-- Rating -->
+          <div class="movie-element box4">
+            <label for="movieRating">Rating: </label>
+            <span id="movie-rating"></span>
+          </div>
+
+          <!-- Director -->
+          <div class="movie-element box5">
+            <label for="movieDirector">Director: </label>
+            <span id="movie-director"></span>
+          </div>
+
+          <!-- Actors -->
+          <div class="movie-element">
+            <label for="movieActors">Actors: </label>
+            <span id="movie-actors"></span>
+          </div>
+        </div> <!-- End movieDetails -->
+
+        <br>
+      </div> <!-- End movieTop -->
+
+      <!--------------- Available options ----------------->
+      <!------------- RENT ----------->
+      <div class="optionsBar">
+        <p>Rent</p>
+      </div>
+      <br>
+      <div class="rentElements section2 group2">
+        <!-- Amazon -->
+        <div class="amazon-elements col2 span2_1_of_4 amazonSelect">
+          <img src="images/amazonLogo.jpg" width="50%">
+          <br>
+          <label for="amazonLogo">$1.29 USD</label>
+        </div>
+        <!-- ClaroVideo -->
+        <div class="claro-elements col2 span2_1_of_4">
+          <img src="images/claroLogo.jpg" width="50%">
+          <br>
+          <label for="claroLogo">$2.99 USD</label>
+        </div>
+        <!-- Vudu -->
+        <div class="vudu-elements col2 span2_1_of_4">
+          <img src="images/vuduLogo.jpg" width="50%">
+          <br>
+          <label for="vuduLogo">$2.99 USD</label>
+        </div>
+        <!-- Discount -->
+        <aside class="col2 span2_1_of_4">
+          <section class="btnResponsive"><strong>Save 20% </strong></section>
+          <a href="#miModal"><input type="button" value="GET CUPON" id="btn1" class="cuponBtn"></a>
+        </aside>
+      </div>
+
+      <!-------------- PURCHASE ------------>
+      <div class="optionsBar">
+        <p>Purchase</p>
+      </div>
+      <br>
+      <div class="rentElements section3 group3">
+        <!-- Amazon -->
+        <div class="amazon-elements  col3 span3_1_of_4">
+          <img src="images/amazonLogo.jpg" width="50%">
+          <br>
+          <label for="amazonLogo">$3.99 USD</label>
+        </div>
+        <!-- ClaroVideo -->
+        <div class="claro-elements col3 span3_1_of_4">
+          <img src="images/claroLogo.jpg" width="50%">
+          <br>
+          <label for="claroLogo">$1.29 USD</label>
+        </div>
+        <!-- Vudu -->
+        <div class="vudu-elements col3 span3_1_of_4">
+          <img src="images/vuduLogo.jpg" width="50%">
+          <br>
+          <label for="vuduLogo">$2.99 USD</label>
+        </div>
+        <!-- Discount -->
+        <aside class="col3 span3_1_of_4">
+          <section class="btnResponsive"><strong> Save 25% </strong></section>
+          <input type="button" value="GET CUPON" id="btn2" class="cuponBtn">
+        </aside>
+        <br>
+      </div>
+      <!---------------- STREAMING --------------->
+      <div class="optionsBar">
+        <p>Stream</p>
+        <br>
+        <!-- ClaroVideo -->
+        <div class="claro-elements col3 span3_1_of_4">
+          <img src="images/claroLogo.jpg" width="50%">
+          <br>
+          <label for="claroLogo">$5.15 USD</label>
+        </div>
+        <!-- Amazon -->
+        <div class="amazon-elements  col3 span3_1_of_4">
+          <img src="images/amazonLogo.jpg" width="50%">
+          <br>
+          <label for="amazonLogo">$6.49 USD</label>
+        </div>
+        <!-- Discount -->
+        <aside class="col3 span3_1_of_4">
+          <section class="btnResponsive"><strong> Get two months free!! </strong></section>
+          <input type="button" value="GET CUPON" id="btn2" class="cuponBtn">
+        </aside>
+        <br>
+
+        <br>
+      </div>
+    </div> <!-- End screenContainer -->
+    <!-- Section List-->
+    <div class="list">
+      <h1>My list</h1>
+      <div class="images section4 group4">
+        <div class="image1 col4 span4_1_of_3">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg">
+        </div>
+        <div class="image2 col4 span4_1_of_3">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNWYyMzJhNzEtMzFkNC00M2U0LTkwMWYtYWVkN2Y2MGI5ODZkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+        </div>
+        <div class="image3 col4 span4_1_of_3">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BOTdkYjA4YzAtMjNiZS00OTgyLTg5Y2ItNGIwZGQyMTUzNzFiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg">
+        </div>
+      </div>
+      <div id="membershipHeader">
+        <div class="membershipTxt">
+          <h2>THE BEST MEMBERSHIP FOR YOU IS:</h2>
+        </div>
+      </div>
+      <br>
+      <div class="membershipItems">
+        <div class="imgClaro">
+          <img src="images/claroLogo.jpg" width="50%">
+        </div>
+        <div class="cupon">
+          <p class="thick"><b>2 FREE MONTHS</b></p>
+          <input type="button" value="GET CUPON" id="btn4" class="cuponBtn">
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

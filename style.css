@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  background-color: #051C2b;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+/*Pantalla de Bienvenida*/
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 0s 0s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2000;
+}
+
+.contenido {
+  margin: auto;
+  background: #fff;
+  color: black;
+  width: 80%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.contenido p {
+  margin: 1rem;
+  margin-top: 8rem;
+  font-size: 3rem;
+}
+
+.logoBlue{
+  display: inline-block;
+  position:absolute;
+  left:33%;
+}
+
+.logoBlue2{
+  display:inline-block;
+}
+
+.amazonRedirect{
+  display: inline-block;
+}
+
+.logoWhite{
+  display: inline-block;
+  position:absolute;
+  left:35%;
+  top: 30%;
+  
+}
+
+#cerrar {
+  display: none;
+}
+
+#cerrar+label {
+  position: fixed;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 50;
+  background: darkred;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.6rem;
+  border-radius: 50%;
+  right: 4.3rem;
+  top: 6.25rem;
+  cursor: pointer;
+  animation: modal 0s 0s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2001;
+}
+
+#cerrar:checked+label, #cerrar:checked~.modal {
+  display: none;
+}
+
+@keyframes modal {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 0.187rem solid #00B4CC;
+  padding: 1.25rem;
+  height: 4rem;
+  border-radius: 0.3125rem;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 1.2rem;
+}
+
+.searchTerm:focus {
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -3.125;
+  width: 4rem;
+  height: 4rem;
+  border: 0.062 solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.31rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+.wrap {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .screenContainer {
+     margin: 0;
+   
+   } */
+
+/*
+   .movieDetails {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+   }
+   */
+
+figure {
+  display: inline-block;
+}
+
+.rentElements {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.amazon-elements:first-child {
+  align-content: center;
+  display: inline-block;
+}
+
+.amazon-elements:nth-child(2) {
+  align-content: center;
+}
+
+.claro-elements figure {
+  display: inline-block;
+}
+
+.vudu-elements figure {
+  display: inline-block;
+}
+
+.optionsBar {
+  background-color: #559cc6;
+  height: 5rem;
+}
+
+.streamBar p {
+  margin-top: 2rem;
+}
+
+.movieTop {
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+input[type=button] {
+  padding: 15%;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background-color: #2dc435;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+/*  SECTION Movie  */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+
+.col {
+  display: block;
+  float: left;
+}
+
+.col:first-child {
+  margin-left: 0rem;
+}
+
+.movieDetails {
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+/*  GROUPING  */
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF TWO  */
+
+.span_1_of_2 {
+  width: 30%;
+}
+
+.span_2_of_2 {
+  width: 70%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 320 PIXELS */
+
+@media only screen and (max-width: 320px) {
+  label {
+    font-size: 0.2rem;
+  }
+  .bntResponsive {
+    font-size: 0.7rem;
+  }
+  input[type=button] {
+    padding: 0.2rem;
+  }
+  #movie-picture {
+    height: 70% ;
+    width: 50% ;
+  }
+  .menu .drop{
+    height: 0.125rem;
+    width: 100%;
+  }
+  .menu .drop svg {
+    margin-top: -1rem;
+  }
+  .searchTerm .searchButton{
+    height:1rem;
+    font-size:0.1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_1_of_2, .span_2_of_2 {
+    width: 100%;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .bntResponsive {
+    font-size: 1.5rem;
+  }
+  input[type=button] {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 780px) {
+  .col {
+    margin: 1% 0% 1% 0%;
+    /* font-size: 1rem; */
+  }
+  .span_1_of_2, .span_2_of_2 {
+    width: 100%;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .bntResponsive {
+    font-size: 1.5rem;
+  }
+  input[type=button] {
+    padding: 1rem;
+  }
+}
+
+/*  SECTION Purchase  */
+
+.section3 {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+
+.col3 {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 0%;
+}
+
+.col3:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+
+.group3:before, .group3:after {
+  content: "";
+  display: table;
+}
+
+.group3:after {
+  clear: both;
+}
+
+.group3 {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+
+.span3_1_of_4 {
+  width: 25%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col3 {
+    margin: 1% 0 1% 0%;
+  }
+  .span3_1_of_4 {
+    width: 100%;
+  }
+}
+
+/*  SECTION RENT  */
+
+.section2 {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+
+.col2 {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 0%;
+}
+
+.col2:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+
+.group2:before, .group2:after {
+  content: "";
+  display: table;
+}
+
+.group2:after {
+  clear: both;
+}
+
+.group2 {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+
+.span2_1_of_4 {
+  width: 25%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col2 {
+    margin: 1% 0 1% 0%;
+  }
+  .span2_1_of_4 {
+    width: 100%;
+  }
+}
+
+/* modal redirection*/
+
+.modalContenido {
+  margin: auto;
+  background: #fff;
+  color: black;
+  width: 80%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.modal1 {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 0s 0s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2000;
+}
+
+#miModal:target {
+  opacity: 1;
+  pointer-events: auto;
+  right: 0;
+  cursor: pointer;
+}
+
+.modalContenido>p {
+  font-size: 3rem;
+}
+
+#addToList {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border-radius: 50%;
+  background-color: #2dc435;
+  font-size: 3rem;
+}
+
+/*  SECTION List */
+
+.section4 {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+
+.col4 {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 0%;
+  width: 30%;
+}
+
+.col4:first-child {
+  margin-left: 8rem;
+}
+
+/*  GROUPING  */
+
+.group4:before, .group4:after {
+  content: "";
+  display: table;
+}
+
+.group4:after {
+  clear: both;
+}
+
+.group4 {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+
+.span4_1_of_4 {
+  width: 25%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col4 {
+    margin: 1% 0 1% 0%;
+  }
+  .span4_1_of_4 {
+    width: 100%;
+  }
+}
+
+/* The navigation menu */
+
+/*pure css*/
+
+.menu {
+  position: relative;
+  text-decoration: none;
+}
+
+.menu nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #559cc6;
+  overflow: hidden;
+}
+
+.menu nav>a {
+  font-size: 1rem;
+  text-decoration: none;
+  display: block;
+  float: left;
+  color: #fff;
+  padding: 1.7rem;
+  transition: background .2s;
+  display: block;
+}
+
+.menu nav>a:hover {
+  background: black;
+}
+
+/*botón*/
+
+.menu .drop {
+  color: #fff;
+  padding: 1.7rem;
+  background-color: #559cc6;
+  cursor: pointer;
+  display: none;
+  /*ocultamos el botón*/
+}
+
+.menu .drop svg {
+  fill: #fff;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    background-color: #559cc6;
+  }
+  .menu .drop {
+    display: inline-block;
+  }
+  /*volvemos a mostrar el botón*/
+  .menu nav {
+    /*ahora nuestro menú es una lista flotante*/
+    position: absolute;
+    align-content: flex-start;
+    z-index: 600;
+    background-color: #559cc6;
+    min-width: .5rem;
+    display: none;
+    top: 100%;
+    left: 0;
+  }
+  .menu nav>a {
+    /*y los ítems se alinean verticalmente*/
+    float: none;
+    border: 0 none;
+  }
+}
+
+.menu input {
+  display: none
+}
+
+/*ocultamos el input*/
+
+#toggle:checked~nav {
+  display: block;
+}
+
+#toggle:checked~label {
+  background-color: #559cc6;
+}
+
+/* #membershipHeader {
+  display:flex;
+} */
+
+.membershipItems {
+  display:flex;
+  justify-content: center;
+}
+
+.membershipTxt {
+  background-color: #559cc6;
+  border:none;
+  text-align: center;
+  padding:0.03%;
+}
+
+.imgClaro {
+  margin-top:3%;
+  display: inline-block;
+  padding-left: 30%;
+}
+
+p.thick{
+  font-weight:bold;
+}
+
+.cupon {
+  display: inline-block;
+  padding-right:26%;
+  /* background-color: #559cc6; */
+}
+
+/*Modal Redirection grid*/
+/*  SECTIONS  */
+.section5 {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col5 {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+.col5:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group5:before,
+.group5:after { content:""; display:table; }
+.group5:after { clear:both;}
+.group5 { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span5_1_of_2 {
+	width: 50%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col5 { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	 .span5_1_of_2 { width: 100%; }
+}
+
+.section5{
+  margin-left:20%;
+  margin-top: 15%;
+}
+ 
+.amazonSelect:hover {
+  background-color:#9DBFAF;
+} 
+
+.amazonSelect:focus {
+  background-color:#9DBFAF;
+}
+
+.redirectingScreen p {
+  font-size: 1.5rem;
+  margin-left: 10%;
+}
+
+.redirectingScreen a{
+  margin-left: 45%;
+}
+
+.searchScreen {
+  background-image: url("images/background.jpg");
+}
